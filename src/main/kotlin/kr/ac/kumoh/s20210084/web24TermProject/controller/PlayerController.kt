@@ -6,8 +6,8 @@ import kr.ac.kumoh.s20210084.web24TermProject.service.PlayerService
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("/api/players")
 @CrossOrigin(origins = ["https://kchtermproject.netlify.app"])
+@RequestMapping("/api/players")
 class PlayerController(private val service: PlayerService) {
     @PostMapping
     fun addPlayer(@RequestBody player: Player): Player = service.addPlayer(player)
