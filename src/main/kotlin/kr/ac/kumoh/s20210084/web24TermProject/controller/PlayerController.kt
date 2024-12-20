@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/players")
-@CrossOrigin(origins = ["http://localhost:3000","https://kchtermproject.netlify.app"])
+@CrossOrigin(origins = ["https://kchtermproject.netlify.app"])
 class PlayerController(private val service: PlayerService) {
     @PostMapping
     fun addPlayer(@RequestBody player: Player): Player = service.addPlayer(player)
